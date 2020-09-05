@@ -16,9 +16,9 @@ The configuration file allows you to configure different aspects of the plugin
 It will also let you define which permission a Player must have to be notified about a new update.
 
 - **excluded_names** This will prevent any entity with a name in this list to drop a Name Tag.
-As the example configuration that comes with the plugin, any entity named `test` will not drop a Name Tag.
+As the example configuration that comes with the plugin, any entity named `Dinnerbone` will not drop a Name Tag.
 
-**PLEASE NOTE THAT THIS IS CASE SENSITIVE**, so for example an entity named `Test` will drop the Name Tag
+**PLEASE NOTE THAT THIS IS CASE SENSITIVE**, so for example an entity named `dinnerbone` will drop the Name Tag
 
 - **excluded_entities** This will prevent any entity whit the ID in this list to drop a Name Tag.
 As the example configuration that comes with the plugin, a named pig will not drop a Name Tag.
