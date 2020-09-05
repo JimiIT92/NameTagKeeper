@@ -5,14 +5,14 @@
 The only supported version will be the latest one, so make sure 
 you have it if you want to receive some assistance in case of issues.
 
-You can download the Plugin from the [Official Sponge Ore Page]()
+You can download the Plugin from the [Official Sponge Ore Page](https://ore.spongepowered.org/Francesco_Jimi/Name-Tag-Keeper)
 
 ## Reporting a Vulnerability
 
 The only place to report a bug or an issue is the [Issue Tracker](https://github.com/JimiIT92/NameTagKeeper/issues) of this repository.
 
 You can also use topics on the [Sponge Forum](https://forums.spongepowered.org/) 
-or the [Plugin Discuss Page]()
+or the [Plugin Discuss Page](https://ore.spongepowered.org/Francesco_Jimi/Name-Tag-Keeper/discuss)
 but note that the Issue Tracker should be the preferred way, simply because anyone can read about the current issues of the plugin,
 and so if others have the same issues they can know when they got fixed.
 

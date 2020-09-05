@@ -1,12 +1,30 @@
 <p align="center"><img align="center" width=40% height=40% src="logo.png"/></p> 
 
 # 🔧 How it works
-Every time a living entity dies on your server, a name tag with it's name will be dropped. This
+Every time a living entity dies on your server, a name tag with its name will be dropped. This
 won't take your precious pet back, but at least you'll have the ability to name another one with the same name
 without using another name tag.
 
 You can also decide which entities will drop the name tag, or even if they will drop if they have 
-a certain name using commands that you'll find [on the Wiki](https://github.com/JimiIT92/NameTagKeeper/wiki).
+a certain name using the configuration file.
+
+# ⚙ Configuring
+
+The configuration file allows you to configure different aspects of the plugin
+
+- **update_check** This will let you configure if the plugin should periodically check for updates.
+It will also let you define which permission a Player must have to be notified about a new update.
+
+- **excluded_names** This will prevent any entity with a name in this list to drop a Name Tag.
+As the example configuration that comes with the plugin, any entity named `test` will not drop a Name Tag.
+
+**PLEASE NOTE THAT THIS IS CASE SENSITIVE**, so for example an entity named `Test` will drop the Name Tag
+
+- **excluded_entities** This will prevent any entity whit the ID in this list to drop a Name Tag.
+As the example configuration that comes with the plugin, a named pig will not drop a Name Tag.
+
+**PLEASE NOTE THAT THIS IS NOT CASE SENSITIVE** so if you type for example `Minecraft:Pig` it will still
+be valid and pigs won't drop a Name Tag (poor souls...)
 
 # 📜 Requirements
 NameTagKeeper does not require any additional plugin or mod to run, other than [Sponge itself](https://www.spongepowered.org/downloads/). 
@@ -19,16 +37,12 @@ Unless some major changes happens on either Sponge API or Minecraft itself, the 
 
 If you find any bug related to a new version of one of these, please report them to the [Issue Tracker](https://github.com/JimiIT92/NameTagKeeper/issues).
 
-# 📖 Documentation
-
-You can find any information about NameTagKeeper inside the [Wiki](https://github.com/JimiIT92/NameTagKeeper/wiki).
-
 # 👨🏼‍💻 How to contribute
 You can add your contribute to the project via [Pull Requests](https://github.com/JimiIT92/NameTagKeeper/pulls).
 
 # 🖥 Downloads
 
-You can download NameTagKeeper from the [Sponge Ore]().
+You can download NameTagKeeper from the [Sponge Ore](https://ore.spongepowered.org/Francesco_Jimi/Name-Tag-Keeper/versions).
 
 This is the only place where I directly upload new releases. Every other website shouldn't be trusted.
 
