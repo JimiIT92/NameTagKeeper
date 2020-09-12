@@ -1,4 +1,9 @@
-<p align="center"><img align="center" width=40% height=40% src="logo.png"/></p> 
+# NAME TAG KEEPER
+<p align="center"><img align="center" width=40% height=40% src="logo.png"/></p>
+
+Have you ever been frustrated by the fact that when your beloved pet dies there's nothing to remember him? Or the fact that you spent 800+ hours to find a Name Tag that you now won't got back? Well, my friend, I got some good news for you! 
+
+Introducing: **NameTagKeeper**! 
 
 # 🔧 How it works
 Every time a living entity dies on your server, a name tag with its name will be dropped. This
@@ -17,12 +22,10 @@ It will also let you define which permission a Player must have to be notified a
 
 - **excluded_names** This will prevent any entity with a name in this list to drop a Name Tag.
 As the example configuration that comes with the plugin, any entity named `Dinnerbone` will not drop a Name Tag.
-
 **PLEASE NOTE THAT THIS IS CASE SENSITIVE**, so for example an entity named `dinnerbone` will drop the Name Tag
 
 - **excluded_entities** This will prevent any entity whit the ID in this list to drop a Name Tag.
 As the example configuration that comes with the plugin, a named pig will not drop a Name Tag.
-
 **PLEASE NOTE THAT THIS IS NOT CASE SENSITIVE** so if you type for example `Minecraft:Pig` it will still
 be valid and pigs won't drop a Name Tag (poor souls...)
 

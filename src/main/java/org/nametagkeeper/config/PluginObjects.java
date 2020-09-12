@@ -4,6 +4,7 @@ import ninja.leaping.configurate.ConfigurationNode;
 import org.nametagkeeper.utils.SettingUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
@@ -32,13 +33,9 @@ public final class PluginObjects {
      */
     public static List<String> UPDATE_BROADCAST_PERMISSIONS;
     /**
-     * Excluded Names
+     * Mob Entries
      */
-    public static List<String> EXCLUDED_NAMES;
-    /**
-     * Excluded Entities
-     */
-    public static List<String> EXCLUDED_ENTITIES;
+    public static HashMap<String, MobEntry> ENTRIES;
 
     /**
      * Load the Plugin settings
@@ -54,8 +51,7 @@ public final class PluginObjects {
                 UPDATE_BROADCAST_PERMISSIONS = getList(updateNode.getNode("broadcast_permissions"), true);
                 UPDATE_BROADCAST_PERMISSIONS.add("*");
             }
-            EXCLUDED_NAMES = getList(config.getNode("excluded_names"), false);
-            EXCLUDED_ENTITIES = getList(config.getNode("excluded_entities"), true);
+            loadEntries(config.getNode("entries"));
         }
     }
 
@@ -71,5 +67,20 @@ public final class PluginObjects {
             String value = Objects.requireNonNull(x.getValue()).toString();
             return toLower ? value.toLowerCase() : value;
         }).collect(Collectors.toList());
+    }
+
+    /**
+     * Load Mob Entries
+     *
+     * @param node Configuration Node
+     */
+    private static void loadEntries(ConfigurationNode node) {
+        ENTRIES = new HashMap<>();
+        node.getChildrenMap().values().forEach(x -> {
+            MobEntry entry = new MobEntry();
+            entry.DROP = getList(x.getNode("drop"), false);
+            entry.NODROP = getList(x.getNode("nodrop"), false);
+            ENTRIES.put(Objects.requireNonNull(x.getKey()).toString(), entry);
+        });
     }
 }
