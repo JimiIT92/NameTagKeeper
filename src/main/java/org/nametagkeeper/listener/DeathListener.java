@@ -79,9 +79,15 @@ public final class DeathListener {
             drop.addAll(allEntry.DROP);
             nodrop.addAll(allEntry.NODROP);
         }
+
+        if(drop.contains(name) && nodrop.contains(name)) {
+            return true;
+        }
+
         if(!nodrop.isEmpty() && nodrop.contains(name)) {
             return false;
         }
+
         return drop.isEmpty() || drop.contains(name);
     }
 }

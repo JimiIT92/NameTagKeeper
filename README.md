@@ -1,7 +1,7 @@
 # NAME TAG KEEPER
 <p align="center"><img align="center" width=40% height=40% src="logo.png"/></p>
 
-Have you ever been frustrated by the fact that when your beloved pet dies there's nothing to remember him? Or the fact that you spent 800+ hours to find a Name Tag that you now won't got back? Well, my friend, I got some good news for you! 
+Have you ever been frustrated by the fact that when your beloved pet dies there's nothing to remember him? Or the fact that you spent 800+ hours to find a Name Tag that you now won't get back? Well, my friend, I got some good news for you! 
 
 Introducing: **NameTagKeeper**! 
 
@@ -20,14 +20,75 @@ The configuration file allows you to configure different aspects of the plugin
 - **update_check** This will let you configure if the plugin should periodically check for updates.
 It will also let you define which permission a Player must have to be notified about a new update.
 
-- **excluded_names** This will prevent any entity with a name in this list to drop a Name Tag.
-As the example configuration that comes with the plugin, any entity named `Dinnerbone` will not drop a Name Tag.
-**PLEASE NOTE THAT THIS IS CASE SENSITIVE**, so for example an entity named `dinnerbone` will drop the Name Tag
+- **entries** This is where you will configure some cases for your mobs. Let's say you want all mobs to drop the Name Tag
+except Sheeps (HOW DARE YOU?). Or you want that only Pigs named `Dinnerbone` will drop the Name Tag. Or maybe any mob
+named `Grumm` will not drop the Name Tag. This configuration allows you to do just that. To specify an entry for a specific
+mob you must create a new configuration object using the mob id. For example, if you want to create a rule for Sheeps, you
+need to type `"minecraft:sheep": {}` (quotation marks included). By doing this you will prevent all Sheeps from dropping
+the Name Tag. Now, let's say that you want Sheeps to be able to drop Name Tags but only if they are named `Dinnerbone`.
+To do this you need to specify the `drop` property like this:
+```
+"minecraft:sheep": {
+    nodrop=["Dinnerbone"]
+}
+```
+Similar you can set a rule so all Sheeps will drop the Name Tag unless they are called `Dinnerbone`.
+```
+"minecraft:sheep": {
+    nodrop=["Dinnerbone"]
+}
+```
 
-- **excluded_entities** This will prevent any entity whit the ID in this list to drop a Name Tag.
-As the example configuration that comes with the plugin, a named pig will not drop a Name Tag.
-**PLEASE NOTE THAT THIS IS NOT CASE SENSITIVE** so if you type for example `Minecraft:Pig` it will still
-be valid and pigs won't drop a Name Tag (poor souls...)
+But what if you want to set a rule for all mobs? Well, you can use the `*` entry. This works like any other entry, except
+it will be applied to all mobs. And here comes a question: what happens if there are both the `*` entry and a mob specific one.
+The answer is: they are merged! So, let's see an example: you want that all mobs named `Dinnerbone` will drop the Name Tag,
+unless they are Sheeps, in which case you want them to drop also if they are named `Grumm`. To do so, simply configure the
+two entries like normal!
+```
+"*": {
+    drop=["Dinnerbone"]
+},
+"minecraft:sheep": {
+    drop=["Grumm"]
+}
+```
+
+**PLEASE NOTE THAT THIS IS CASE SENSITIVE**, so for example an entity named `dinnerbone` will not drop the Name Tag.
+
+Even further, what if you want all mobs not to drop a Name Tag if they are name d `Dinnerbone` unless is a Pig?
+Just configure the two entries like normal!
+```
+"*": {
+    nodrop=["Dinnerbone"]
+},
+"minecraft:pig": {
+    drop=["Dinnerbone"]
+}
+```
+
+The only limit is your imagination (and your needs, of course)!
+
+An example entries configuration could be this
+
+```
+entries {
+    "*" {
+        nodrop=[
+            Grumm
+        ]
+    }
+    "minecraft:pig" {
+        drop=[
+            Grumm
+        ]
+    }
+    "minecraft:sheep" {}
+}
+```
+
+This will make so any entity will drop a Name Tag unless they are named Grumm. But this rule doesn't apply
+to Pigs, which will drop the Name Tag ONLY if they are named Grumm. Same for Sheeps, which won't drop
+a Name Tag in any case
 
 # 📜 Requirements
 NameTagKeeper does not require any additional plugin or mod to run, other than [Sponge itself](https://www.spongepowered.org/downloads/). 
