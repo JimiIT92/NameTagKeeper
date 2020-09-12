@@ -1,4 +1,4 @@
-# NAME TAG KEEPER
+# NAME TAG KEEPER ![CodeQL](https://github.com/JimiIT92/NameTagKeeper/workflows/CodeQL/badge.svg) ![https://www.spongepowered.org/](https://img.shields.io/badge/Sponge-7.2.0-yellow) ![https://ore.spongepowered.org/Francesco_Jimi/Name-Tag-Keeper/versions/1.0](https://img.shields.io/badge/Release-1.0-yellow)
 <p align="center"><img align="center" width=40% height=40% src="logo.png"/></p>
 
 Have you ever been frustrated by the fact that when your beloved pet dies there's nothing to remember him? Or the fact that you spent 800+ hours to find a Name Tag that you now won't get back? Well, my friend, I got some good news for you! 
