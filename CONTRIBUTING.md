@@ -2,4 +2,4 @@ If you want to contribute to plugin development, feel free to [create a Feature 
 
 You can also contribute via [Pull Requests](https://github.com/JimiIT92/NameTagKeeper/pulls)
 
-Feel free to ask whatever cahnge you want. If it belongs to the plugin it will be added! 😁
+Feel free to ask whatever change you want. If it belongs to the plugin it will be added! 😁
