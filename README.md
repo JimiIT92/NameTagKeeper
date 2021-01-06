@@ -115,7 +115,7 @@ You can add your contribute to the project via [Pull Requests](https://github.co
 
 # 🖥 Downloads
 
-You can download NameTagKeeper from the [Sponge Ore](https://ore.spongepowered.org/Francesco_Jimi/Name-Tag-Keeper/versions).
+You can download NameTagKeeper from the [Sponge Ore page](https://ore.spongepowered.org/Francesco_Jimi/Name-Tag-Keeper/versions).
 
 This is the only place where I directly upload new releases. Every other website shouldn't be trusted.
 
